@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CareerPilot AI — Career Intelligence</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div id="toast"></div>
+    <div id="auth" class="auth">
+      <div class="auth-card">
+        <div class="brand">✦ CareerPilot <span>AI</span></div>
+        <h1>Build your next chapter.</h1>
+        <p>
+          Your intelligent career workspace, powered by coordinated AI
+          workflows.
+        </p>
+        <div class="tabs">
+          <button id="loginTab" class="selected" onclick="toggleAuth(false)">
+            Sign in</button
+          ><button id="regTab" onclick="toggleAuth(true)">
+            Create account
+          </button>
+        </div>
+        <input id="name" placeholder="Full name" style="display: none" /><input
+          id="email"
+          type="email"
+          placeholder="Email address"
+        /><input
+          id="password"
+          type="password"
+          placeholder="Password (8+ characters)"
+        /><select id="role" style="display: none">
+          <option value="student">Student / Job seeker</option>
+          <option value="recruiter">Recruiter</option></select
+        ><button class="primary wide" onclick="authenticate()" id="authSubmit">
+          Sign in</button
+        ><small>Demo runs locally. Use a new account to get started.</small>
+      </div>
+    </div>
+    <div id="app" class="shell hidden">
+      <aside>
+        <div class="brand">✦ CareerPilot <span>AI</span></div>
+        <div class="nav-group">WORKSPACE</div>
+        <nav id="nav"></nav>
+        <div class="side-foot">
+          <div id="userBadge"></div>
+          <button onclick="logout()" class="secondary wide">Sign out ↗</button>
+        </div>
+      </aside>
+      <main>
+        <header>
+          <div>
+            <div class="eyebrow">YOUR CAREER INTELLIGENCE PLATFORM</div>
+            <h1 id="pageTitle">Overview</h1>
+          </div>
+          <div class="head-actions">
+            <span class="status">● Local AI workflow ready</span>
+            <div class="avatar" id="avatar">CP</div>
+          </div>
+        </header>
+        <div id="content"></div>
+      </main>
+    </div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
